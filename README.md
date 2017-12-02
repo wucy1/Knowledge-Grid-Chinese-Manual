@@ -1,1 +1,1 @@
-# Knowledge-Grid-Manual-Chinese-
+# Knowledge-Grid-Manual-Chinese
