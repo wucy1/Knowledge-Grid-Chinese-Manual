@@ -5,7 +5,7 @@
   "version": "0.1.2",
   "owner":"International Centre for Health Information Technology, Taipei Medical University",
   "description": "This object is used for suggesting wafrain dosing strategies. The inputs are the test results of VKORC1-1639G>A, CYP2C9*2, CYP2C9*3 (POSITIVE/(+) or NEGATIVE/(-)) and if have European Ancenstry (POSITIVE/(+) or NEGATIVE/(-))",
-  "contributors":"CY Wu",
+  "contributors":"wucy1",
   "keywords":"Warfrain, children",
   "published":true,
   "lastModified":null,
