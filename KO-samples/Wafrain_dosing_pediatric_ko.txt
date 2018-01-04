@@ -1,6 +1,6 @@
 {
   "metadata": {
-  "title": "CPIC - Warfrain dosing recomendations for pediatric patients",
+  "title": "CPIC - Warfrain dosing recommendations for pediatric patients",
   "arkId": "ark:/99999/fk44x5kj01",
   "version": "0.1.2",
   "owner":"International Centre for Health Information Technology, Taipei Medical University",
