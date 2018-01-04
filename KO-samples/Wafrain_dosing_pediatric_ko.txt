@@ -1,0 +1,25 @@
+{
+  "metadata": {
+  "title": "CPIC - Warfrain dosing recomendations for pediatric patients",
+  "arkId": "ark:/99999/fk44x5kj01",
+  "version": "0.1.2",
+  "owner":"International Centre for Health Information Technology, Taipei Medical University",
+  "description": "This object is used for suggesting wafrain dosing strategies. The inputs are the test results of VKORC1-1639G>A, CYP2C9*2, CYP2C9*3 (POSITIVE/(+) or NEGATIVE/(-)) and if have European Ancenstry (POSITIVE/(+) or NEGATIVE/(-))",
+  "contributors":"CY Wu",
+  "keywords":"Warfrain, children",
+  "published":true,
+  "lastModified":null,
+  "createdOn":null,
+  "objectType":null,
+  "citations":[{"citation_id":null,"citation_title":"CPIC® Guideline for Pharmacogenetics-Guided Warfarin Dosing","citation_at":"https://cpicpgx.org/guidelines/guideline-for-warfarin-and-cyp2c9-and-VKORC1-1639G>A/"}],
+  "license":{"licenseName":"","licenseLink":""}
+  },
+  "payload": {
+    "content": "def getGuideline(instr):\n\tif not instr[\"VKORC1-1639G>A\"] or not instr[\"CYP2C9*2\"] or not instr[\"CYP2C9*3\"] or not instr[\"European\"]:\n\t\t#input does not include proper allele keys\n\t\traise Exception(\"Input must contain keys 'VKORC1-1639G>A' and 'CYP2C9*2' and 'CYP2C9*3' and 'European'\")\n\telse:\n\t\tinstr[\"VKORC1-1639G>A\"]=instr[\"VKORC1-1639G>A\"].strip()\n\t\tinstr[\"CYP2C9*2\"]=instr[\"CYP2C9*2\"].strip()\n\t\tinstr[\"CYP2C9*3\"]=instr[\"CYP2C9*3\"].strip()\n\t\tinstr[\"European\"]=instr[\"European\"].strip()\n\tpositives=(\"POSITIVE\",\"(+)\")\n\tpos1=0\n\tpos2=0\n\tpos3=0\n\tpos4=0\n\tfor p_str in positives:\n\t\tif p_str in instr[\"VKORC1-1639G>A\"]:\n\t\t\tpos1=1\n\tfor p_str in positives:\n\t\tif p_str in instr[\"CYP2C9*2\"]:\n\t\t\tpos2=1\n\tfor p_str in positives:\n\t\tif p_str in instr[\"CYP2C9*3\"]:\n\t\t\tpos3=1\n\tfor p_str in positives:\n\t\tif p_str in instr[\"European\"]:\n\t\t\tpos4=1\n\tif (pos1+pos2+pos3+pos4)==4:\n\t\treturn \"Calcaulate dose based on validated published pharmacogenetic algorithms\"\n\telse:\n\t\treturn \"Dose clinically\"",
+    "engineType": "Python",
+    "functionName": "getGuideline"
+  },
+  "inputMessage": "<rdf:RDF xmlns:ot='http://uofm.org/objectteller/'\n xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>\n\t<rdf:Description rdf:about='http://uofm.org/objectteller/inputMessage'>\n\t\t<ot:noofparams>4</ot:noofparams>\n\t\t<ot:params>\n\t\t\t<rdf:Seq>\n\t\t\t\t<rdf:li>VKORC1-1639G>A</rdf:li>\n\t\t\t\t<rdf:li>CYP2C9*2</rdf:li>\n\t\t\t\t<rdf:li>CYP2C9*3</rdf:li>\n\t\t\t\t<rdf:li>European</rdf:li>\n\t\t\t</rdf:Seq>\n\t\t</ot:params>\n\t</rdf:Description>\n\t<rdf:Description rdf:about='http://uofm.org/objectteller/allele4/'>\n\t    <ot:datatype>STRING</ot:datatype>\n\t</rdf:Description>\n\t<rdf:Description rdf:about='http://uofm.org/objectteller/allele3/'>\n\t    <ot:datatype>STRING</ot:datatype>\n\t</rdf:Description>\n\t<rdf:Description rdf:about='http://uofm.org/objectteller/allele2/'>\n\t\t<ot:datatype>STRING</ot:datatype>\n\t</rdf:Description>\n\t<rdf:Description rdf:about='http://uofm.org/objectteller/allele1/'>\n\t\t<ot:datatype>STRING</ot:datatype>\n\t</rdf:Description>\n</rdf:RDF>",
+  "outputMessage": "<rdf:RDF xmlns:ot='http://uofm.org/objectteller/'\n xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>\n\t<rdf:Description rdf:about='http://uofm.org/objectteller/outputMessage'>\n\t\t<ot:returntype>STRING</ot:returntype>\n\t</rdf:Description>\n</rdf:RDF>",
+  "url": "ark:/99999/fk44x5kj01"
+}
