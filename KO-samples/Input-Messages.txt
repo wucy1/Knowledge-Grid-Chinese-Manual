@@ -1,0 +1,25 @@
+<rdf:RDF xmlns:ot='http://uofm.org/objectteller/' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+  <rdf:Description rdf:about='http://uofm.org/objectteller/inputMessage'>
+    <ot:noofparams>4</ot:noofparams>
+    <ot:params>
+			<rdf:Seq>
+         <rdf:li>VKORC1-1639G>A</rdf:li>
+         <rdf:li>CYP2C9*2</rdf:li>
+         <rdf:li>CYP2C9*3</rdf:li>
+         <rdf:li>European</rdf:li>
+			</rdf:Seq>
+    </ot:params>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://uofm.org/objectteller/VKORC1-1639G>A/'>
+		<ot:datatype>STRING</ot:datatype>
+	</rdf:Description>
+	<rdf:Description rdf:about='http://uofm.org/objectteller/CYP2C9*2/'>
+		<ot:datatype>STRING</ot:datatype>
+  </rdf:Description>
+  <rdf:Description rdf:about='http://uofm.org/objectteller/CYP2C9*3/'>
+    <ot:datatype>STRING</ot:datatype>
+  </rdf:Description>
+	<rdf:Description rdf:about='http://uofm.org/objectteller/European/'>
+		<ot:datatype>STRING</ot:datatype>
+	</rdf:Description>
+</rdf:RDF>
