@@ -10,7 +10,7 @@ Knowledge Grid Chinese Manual @ https://github.com/wucy1/Knowledge-Grid-Chinese-
 - 知識網格元件編寫  
 以Python為例，進行知識元件編寫說明
 
-- 知識網格啟動套件_Windows
+- 知識網格啟動套件_Windows  
 知識網格啟動套件以最小規模展示完整的知識網格架構，本文為以Windows為作業系統撰寫
 
 - KO-samples  
